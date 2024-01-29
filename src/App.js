@@ -61,7 +61,7 @@ const ExcelLink = () => {
       />
       <table>
         <thead>
-          <tr>
+          <tr className='table'>
             <th>Serial Number</th>
             <th>Link</th>
             <th>Prefix</th>
@@ -72,18 +72,22 @@ const ExcelLink = () => {
         <tbody>
           {data.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              <td>{row.serialNumber}</td>
+              <td>
+                <span className="number-link">{row.serialNumber}</span>
+              </td>
               <td>
                 <a
                   href={row.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: 'blue', textDecoration: 'underline' }}
+                  className="number-links"
                 >
                   {row.link}
                 </a>
               </td>
-              <td>{row.prefix}</td>
+              <td>
+                <span className="prefix">{row.prefix}</span>
+              </td>
               <td>
                 <div className="custom-select-container">
                   <select
@@ -94,7 +98,7 @@ const ExcelLink = () => {
                   >
                     <option value="" disabled>Select a tag</option>
                     {tags.slice(0, 10).map((tag, tagIndex) => (
-                      <option key={tagIndex} value={tag}>
+                      <option key={tagIndex} value={tag} className="custom-option">
                         {`Tag ${tagIndex + 1} (${tag})`}
                       </option>
                     ))}

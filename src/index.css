@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Add these styles to your CSS file */
+
+.number-link {
+  color: blue;
+  text-decoration: underline;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.number-links {
+  color: blue;
+  text-decoration: underline;
+}
+
+.prefix {
+  /* Add any styles you want for the prefix here */
+}
+
+.custom-select-container {
+  position: relative;
+  width: 200px;
+  margin: 5px;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 5px;
+}
+
+.custom-option {
+  /* Add any styles you want for the options here */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Additional styles for tags */
+span[style^="color:blue;"] {
+  color: blue;
+}
+
+span[style^="color:orange;"] {
+  color: orange;
+}
+
+.number-links[style^="color:blue;"],
+.number-links[style^="color:orange;"] {
+  text-decoration: none;
 }
